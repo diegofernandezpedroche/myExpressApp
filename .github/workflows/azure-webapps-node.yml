@@ -18,9 +18,12 @@
 # For more samples to get started with GitHub Action workflows to deploy to Azure: https://github.com/Azure/actions-workflow-samples
 
 on:
-  push:
-    branches: [ "master" ]
-  workflow_dispatch:
+  release:
+     types: [created]
+name: Azure Test
+  #push:
+  #  branches: [ "master" ]
+  #workflow_dispatch:
 
 env:
   AZURE_WEBAPP_NAME: node-06272020    # set this to your application's name
